@@ -14,10 +14,6 @@
 		UIKitBundle = [NSBundle bundleForClass:UIView.class];
 	});
 
-	if (!self.iconName) {
-		return nil;
-	}
-
 	UIImage *image = [UIImage imageNamed:[self.foregroundStyle expandedNameForImageName:self.iconName] inBundle:UIKitBundle];
 	UIImage *tintedImage = [image _flatImageWithColor:self.foregroundStyle.tintColor];
 	return [%c(_UILegibilityImageSet) imageFromImage:tintedImage withShadowImage:nil];
