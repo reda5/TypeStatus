@@ -20,4 +20,9 @@
 	return self;
 }
 
+- (void)dealloc {
+	[_control release];
+	[super dealloc];
+}
+
 @end
